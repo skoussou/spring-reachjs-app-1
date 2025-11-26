@@ -1,7 +1,7 @@
 # Use an OpenJDK base image for Java
 #FROM openjdk:17
 FROM registry.redhat.io/ubi9/openjdk-17
-
+WORKDIR /home
 # Use ADD to download the JAR directly from GitHub
 ADD https://github.com/skoussou/spring-reachjs-app-1/raw/refs/heads/main/backend/target/weather-0.0.1-SNAPSHOT.jar main.jar
 RUN pwd
